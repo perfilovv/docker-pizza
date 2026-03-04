@@ -16,12 +16,16 @@
         }
         stage('build') {
             steps {
-                buildApp()
+                script {
+                    buildApp()
+                }
             }
         }
         stage('test') {
             steps {
-                testApp()
+                script {
+                    testApp()
+                }
             }
         }
         stage('deploy') {
