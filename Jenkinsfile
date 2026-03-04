@@ -30,7 +30,9 @@
         }
         stage('deploy') {
             steps {
-                gv.testApp()
+                script {
+                    gv.deployApp()
+                }
             }
         }
     }
